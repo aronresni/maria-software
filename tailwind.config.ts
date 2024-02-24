@@ -1,4 +1,19 @@
-import type { Config } from "tailwindcss";
+import { Config  } from "tailwindcss";
+
+// Define la función para aplanar la paleta de colores
+function flattenColorPalette(colors: any) {
+  return Object.keys(colors).reduce((acc, key) => {
+    const value = colors[key];
+    if (typeof value === 'object') {
+      Object.keys(value).forEach(subKey => {
+        acc[`${key}-${subKey}`] = value[subKey];
+      });
+    } else {
+      acc[key] = value;
+    }
+    return acc;
+  }, {} as Record<string, string>);
+}
 
 const config: Config = {
   content: [
@@ -15,6 +30,21 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    addVariablesForColors,
+  ],
 };
+// Esta función agrega cada color de Tailwind como una variable CSS global, por ejemplo, var(--gray-200).
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+  
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
+
 export default config;
