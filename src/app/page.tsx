@@ -1,14 +1,13 @@
-import { MacbookScrollDemo } from "../components/macbookScroll";
-import { NavbarDemo } from "../components/navBar"
-import {SpotlightPreview} from "../components/spotlight-tittle"
-import {CardHoverEffectDemo} from "../components/card-hover"
+import { NavbarDemo, SpotlightPreview, CardHoverEffectDemo, MacbookScrollDemo, Footer } from "components/index";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between px-2">
       <NavbarDemo />
-      <SpotlightPreview/>
-      <CardHoverEffectDemo/>
+      <SpotlightPreview />
+      <CardHoverEffectDemo />
       <MacbookScrollDemo />
+      <Footer/>
     </main>
   );
 }

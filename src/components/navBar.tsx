@@ -2,9 +2,14 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../components/ui/navbar-menu";
 import { cn } from "../utils/cn";
+import logo from "../assets/maria-logo.png"
+
+
 export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
+
+
       <Navbar className="top-2" />
 
     </div>
