@@ -1,4 +1,4 @@
-import { NavbarDemo, SpotlightPreview, CardHoverEffectDemo, MacbookScrollDemo, Footer } from "components/index";
+import { NavbarDemo, SpotlightPreview, CardHoverEffectDemo, MacbookScrollDemo, Footer, LampDemo } from "components/index";
 
 export default function Home() {
   return (

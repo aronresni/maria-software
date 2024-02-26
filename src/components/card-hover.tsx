@@ -1,47 +1,48 @@
 import { HoverEffect } from "../components/ui/card-hover-effect";
- 
 export function CardHoverEffectDemo() {
+  
   return (
-    <div className="max-w-5xl mx-auto px-8">
-      <HoverEffect items={projects} />
-    </div>
+<div className="max-w-5xl mx-auto px-2">
+  <div className="p-0 max-w-5xl mx-auto relative z-5 w-full pt-10 md:pt-0">
+  <h1 className="text-center text-xs sm:text-base md:text-xl lg:text-3xl xl:text-5xl font-bold whitespace-nowrap">Algunos de nuestros beneficios.</h1>
+
+  </div>
+  <HoverEffect items={projects} className="mt-8" />
+</div>
+
   );
 }
 export const projects = [
   {
-    title: "Stripe",
+    title: "Reseñas en linea",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Automatiza tus reseñas en línea con solo unos pocos clics y responde a las reseñas en un solo lugar.",
   },
   {
-    title: "Netflix",
+    title: "Mensajería",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Administra tus mensajes con una bandeja de entrada única para mensajes de texto, mensajes de Facebook, mensajes de Google y más.",
+ 
   },
   {
-    title: "Google",
+    title: "Chat web",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Convierte a más visitantes del sitio web en conversaciones de ventas y clientes potenciales con el chat web.",
+
   },
   {
-    title: "Meta",
+    title: "Pagos",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Facturación de clientes mediante mensajes de texto simplificada. Simplifica la facturación de tus clientes y recibe pagos más rápidos.",
   },
   {
-    title: "Amazon",
+    title: "Respuesta automática de mensajes perdidos",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "Cuando estés ausente, deja que nuestro software haga un seguimiento mediante mensajes de texto para que nunca pierdas otro cliente.",
   },
   {
-    title: "Microsoft",
+    title: "CRM",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Haz crecer tu audiencia y conoce de dónde vienen los nuevos clientes potenciales.",
   },
 ];
