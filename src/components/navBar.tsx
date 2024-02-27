@@ -61,7 +61,6 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
-        <img src={logo} alt="Logo de María" className="h-12 w-auto mx-auto" />
         <MenuItem setActive={setActive} active={active} item="Contactanos">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/hobby">Hobby</HoveredLink>
